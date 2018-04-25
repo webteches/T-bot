@@ -496,4 +496,4 @@ if(message.content.startsWith('?web')) {
                                                 })
 
                                               
-bot.login('NDM1MTc3NjQwODMyMjcwMzQ4.DbVKRw.edxnknmwo4MXtsDVkwULPQLRZBg');
+bot.login(process.env.TOKEN);
