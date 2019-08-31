@@ -477,19 +477,6 @@ if(message.content.startsWith('?web')) {
                                                 message.channel.send(uinfoEmbed);                                                     
                                                  }
                                                 });                                              
-                                                bot.on("guildMemberAdd", member => {
-                                                    const logs = member.guild.channels.find(m => m.name === "logs-douzii");
-                                                    if (!logs) return console.log("Salon Logs absent!");
-                                                    const embed = new Discord.RichEmbed()
-                                                    .setColor('#FE6F01')
-                                                    .setAuthor(member.user.tag, member.user.avatarURL)
-                                                    .setTitle("Arrivée d'un nouvel utilisateur")
-                                                    .addField("Un nouvel utilisateur vient d'arriver", `Il s'agit de [${member.user.tag}](https://discordapp.com/)`, true)
-                                                    .addField(`Nombre de membres après l'arrivée de __${member.user.tag}__`, member.guild.memberCount)
-                                                    .setTimestamp()
-                                                logs.send({embed})
-                                                });
-
                                                 bot.on("guildMemberAdd", member =>{
                                                     if(!member.guild.roles.find('name', 'Membres')) return console.log("Role inconnu");
                                                     member.addRole(member.guild.roles.find('name', "Membres"));
